@@ -1,0 +1,337 @@
+---
+openapi: 3.0.3
+info:
+  title: code-with-quarkus API
+  version: 1.0.0-SNAPSHOT
+paths:
+  /BankerCheque/addAllBankerCheque:
+    post:
+      tags:
+      - Banker Cheque Controller
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BankChequeTL'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BankChequeTL'
+  /BankerCheque/getAllBankerCheque:
+    get:
+      tags:
+      - Banker Cheque Controller
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+components:
+  schemas:
+    BankChequeTL:
+      type: object
+      properties:
+        id:
+          format: int64
+          type: integer
+        ISS_BRN_CD:
+          type: string
+        APP_NO:
+          type: string
+        APP_YEAR:
+          type: string
+        BNKCHQ_NO:
+          type: string
+        BNKCHQ_YEAR:
+          type: string
+        ISS_DATE:
+          type: string
+        RENEW_DT:
+          type: string
+        STATUS:
+          type: string
+        DUPLICATE_STS:
+          type: string
+        BNKCHQ_AMOUNT:
+          type: string
+        CR_BRN_CD:
+          type: string
+        CR_CUST_NO:
+          type: string
+        CR_AC_TYPE:
+          type: string
+        CR_RUN_NO:
+          type: string
+        CR_CHK_DIGT:
+          type: string
+        IBCA_NO:
+          type: string
+        NIC_NO:
+          type: string
+        BENEF_NAME:
+          type: string
+        BENEF_ADD1:
+          type: string
+        BENEF_ADD2:
+          type: string
+        BENEF_ADD3:
+          type: string
+        PICKUP_NAME:
+          type: string
+        PICKUP_CNIC:
+          type: string
+        PICKUP_CELL_NO:
+          type: string
+        PRESS_PRINT_NO:
+          type: string
+        ORIG_PO_YEAR:
+          type: string
+        ORIG_PO_NO:
+          type: string
+        PREV_PO_YEAR:
+          type: string
+        PREV_PO_NO:
+          type: string
+        SUB_BRN_CD:
+          type: string
+        TOT_CHARG_IB:
+          type: string
+        VOUCH_NO:
+          type: string
+        VOUCH_YEAR:
+          type: string
+        POST_DT:
+          type: string
+        POST_BY:
+          type: string
+        AUTH_DT:
+          type: string
+        AUTH_BY:
+          type: string
+        REMARKS:
+          type: string
+        PRINT_STS:
+          type: string
+        REPRINT_STATUS:
+          type: string
+        BENEF_NO:
+          type: string
+        NO_OF_PRINT:
+          type: string
+        CR_MODE:
+          type: string
+        CR_VOUCH_NO:
+          type: string
+        CR_VOUCH_YEAR:
+          type: string
+        PAY_IBCA_NO:
+          type: string
+        PRSNTNG_BRN_CD:
+          type: string
+        PAY_REF_NO:
+          type: string
+        PAY_REF_YEAR:
+          type: string
+        ISS_REF_NO:
+          type: string
+        ISS_REF_YEAR:
+          type: string
+        TOTAL_CHG:
+          type: string
+        STOP_CHRGS:
+          type: string
+        STOP_VOUCH_NO:
+          type: string
+        STOP_VOUCH_YEAR:
+          type: string
+        LOCK_STS:
+          type: string
+        LOCK_BY:
+          type: string
+        ISS_REV_REF_NO:
+          type: string
+        ISS_REV_REF_YEAR:
+          type: string
+        ISSUED_BY:
+          type: string
+        LOCK_BRN:
+          type: string
+        BEF_NAME1:
+          type: string
+        BEF_NAME2:
+          type: string
+        BEF_CELL_NO:
+          type: string
+        CR_CNIC_NO:
+          type: string
+        APP_REQ_MODE:
+          type: string
+        QR_BAR_CD:
+          type: string
+        BENEF_TYPE:
+          type: string
+        ID_DOC_TYPE:
+          type: string
+        ID_DOC_NO:
+          type: string
+        PURPOSE:
+          type: string
+        BENEF_RELATION:
+          type: string
+        OTHER_PURPOSE:
+          type: string
+        OTHER_BENEF_RELATION:
+          type: string
+        iSS_BRN_CD:
+          type: string
+        aPP_NO:
+          type: string
+        aPP_YEAR:
+          type: string
+        bNKCHQ_NO:
+          type: string
+        bNKCHQ_YEAR:
+          type: string
+        iSS_DATE:
+          type: string
+        rENEW_DT:
+          type: string
+        sTATUS:
+          type: string
+        dUPLICATE_STS:
+          type: string
+        bNKCHQ_AMOUNT:
+          type: string
+        cR_BRN_CD:
+          type: string
+        cR_CUST_NO:
+          type: string
+        cR_AC_TYPE:
+          type: string
+        cR_RUN_NO:
+          type: string
+        cR_CHK_DIGT:
+          type: string
+        iBCA_NO:
+          type: string
+        nIC_NO:
+          type: string
+        bENEF_NAME:
+          type: string
+        bENEF_ADD1:
+          type: string
+        bENEF_ADD2:
+          type: string
+        bENEF_ADD3:
+          type: string
+        pICKUP_NAME:
+          type: string
+        pICKUP_CNIC:
+          type: string
+        pICKUP_CELL_NO:
+          type: string
+        pRESS_PRINT_NO:
+          type: string
+        oRIG_PO_YEAR:
+          type: string
+        oRIG_PO_NO:
+          type: string
+        pREV_PO_YEAR:
+          type: string
+        pREV_PO_NO:
+          type: string
+        sUB_BRN_CD:
+          type: string
+        tOT_CHARG_IB:
+          type: string
+        vOUCH_NO:
+          type: string
+        vOUCH_YEAR:
+          type: string
+        pOST_DT:
+          type: string
+        pOST_BY:
+          type: string
+        aUTH_DT:
+          type: string
+        aUTH_BY:
+          type: string
+        rEMARKS:
+          type: string
+        pRINT_STS:
+          type: string
+        rEPRINT_STATUS:
+          type: string
+        bENEF_NO:
+          type: string
+        nO_OF_PRINT:
+          type: string
+        cR_MODE:
+          type: string
+        cR_VOUCH_NO:
+          type: string
+        cR_VOUCH_YEAR:
+          type: string
+        pAY_IBCA_NO:
+          type: string
+        pRSNTNG_BRN_CD:
+          type: string
+        pAY_REF_NO:
+          type: string
+        pAY_REF_YEAR:
+          type: string
+        iSS_REF_NO:
+          type: string
+        iSS_REF_YEAR:
+          type: string
+        tOTAL_CHG:
+          type: string
+        sTOP_CHRGS:
+          type: string
+        sTOP_VOUCH_NO:
+          type: string
+        sTOP_VOUCH_YEAR:
+          type: string
+        lOCK_STS:
+          type: string
+        lOCK_BY:
+          type: string
+        iSS_REV_REF_NO:
+          type: string
+        iSS_REV_REF_YEAR:
+          type: string
+        iSSUED_BY:
+          type: string
+        lOCK_BRN:
+          type: string
+        bEF_NAME1:
+          type: string
+        bEF_NAME2:
+          type: string
+        bEF_CELL_NO:
+          type: string
+        cR_CNIC_NO:
+          type: string
+        aPP_REQ_MODE:
+          type: string
+        qR_BAR_CD:
+          type: string
+        bENEF_TYPE:
+          type: string
+        iD_DOC_TYPE:
+          type: string
+        iD_DOC_NO:
+          type: string
+        pURPOSE:
+          type: string
+        bENEF_RELATION:
+          type: string
+        oTHER_PURPOSE:
+          type: string
+        oTHER_BENEF_RELATION:
+          type: string
