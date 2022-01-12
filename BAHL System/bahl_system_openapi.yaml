@@ -50,7 +50,7 @@ components:
         BNKCHQ_YEAR:
           type: string
         ISS_DATE:
-          type: string
+          type: date
         RENEW_DT:
           type: string
         STATUS:
